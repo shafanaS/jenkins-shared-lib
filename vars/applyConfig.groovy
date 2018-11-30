@@ -44,7 +44,7 @@ def call(Map config) {
             } else if (status == Constants.ControlConstants.STATUS_FAILED_RM_UNZIP) {
                 throw new Exception("Failed to remove zip")
             } else if (status == Constants.ControlConstants.STATUS_FAILED_ARTIFACT_APPLY) {
-                throw new Exception("Failed to apply artefatcs")
+                throw new Exception("Failed to apply artifatcs")
             }
         }
     }
