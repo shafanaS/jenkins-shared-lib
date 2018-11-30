@@ -31,7 +31,15 @@ def call(Map config) {
 
         withAWS(credentials: "${config.credID}", region: "${config.region}") {
             def outputs = cfnUpdate(stack: "${config.environment}", file: "${config.cf}",
-                    params: [AWSAccessKeyId, AWSAccessKeySecret, WSO2InstanceType, KeyPairName, CertificateName, DBUsername, DBPassword, JDKVersion, AMIId]
+                    params: [AWSAccessKeyId,
+                             AWSAccessKeySecret,
+                             WSO2InstanceType,
+                             KeyPairName,
+                             CertificateName,
+                             DBUsername,
+                             DBPassword,
+                             JDKVersion,
+                             AMIId]
                     , timeoutInMinutes: 20, pollInterval: 1000)
              return outputs.'${config.testEndpoint}'
 
