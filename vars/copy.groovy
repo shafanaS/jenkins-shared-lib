@@ -22,7 +22,6 @@ def call(Map config) {
     withEnv(["SRC=${config.src}", "DEST=${config.dest}"]) {
         int status = sh(
                 script: '''
-                #!/bin/bash +x
                 cp -r ${SRC} ${DEST}
                 ''',
                 returnStatus: true
