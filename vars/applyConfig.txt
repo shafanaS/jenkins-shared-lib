@@ -13,6 +13,6 @@
 <p>
     <pre>
         @Library('wso2-pipeline-core') _
-        applyConfig wum_creds: "${WUM_CREDS}", puppetManifest: "${PUPPET_CONF}", artifactsLoc: "${ARTIFACT_LOC}", zipLoc: "${IMAGE_RESOURCES_LOC}", wumHome: "${WUM_HOME}"
+        applyConfig product:"params.PRODUCT", version: "params.VERSION", wum_creds: "${WUM_CREDS}", puppetManifest: "${PUPPET_CONF}", artifactsLoc: "${ARTIFACT_LOC}", zipLoc: "${IMAGE_RESOURCES_LOC}", wumHome: "${WUM_HOME}"
     <pre>
 </p>

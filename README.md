@@ -11,12 +11,12 @@ This library depends on following Jenkins plugins:
 
 
 
-#### How to use
+#### Quick Start Guide
 
-1. Configure this repository as a shared library
+1. Configure this repository as a shared library under the name "wso2-jenkins-shared-lib"
 2. Usage of logging functions 
 ```
-@Library('wso2-jenkins-core')
+@Library('wso2-jenkins-shared-lib')
 
 node("master") {
     stage("Example") {
