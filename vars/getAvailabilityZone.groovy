@@ -17,13 +17,13 @@
 * under the License.
 */
 String call() {
-    def ss = sh(
+    env.ss = sh(
             script: '''
                     set +x
                     ec2metadata --availability-zone | sed \'s/[a-z]$//\'
                     ''',
             returnStdout: true
     ).trim().toString()
-    echo ss
+    echo "ss: ${env.ss}"
     return "Ss"
 }
