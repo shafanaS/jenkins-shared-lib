@@ -23,5 +23,5 @@ String call() {
                     ec2metadata --availability-zone | sed \'s/[a-z]$//\'
                     ''',
             returnStdout: true
-    ).trim()
+    ).trim().toString()
 }
