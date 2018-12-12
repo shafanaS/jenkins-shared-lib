@@ -40,7 +40,7 @@ def call(Map config) {
                              DBPassword,
                              JDKVersion,
                              AMIId]
-                    , timeoutInMinutes: 20, pollInterval: 1000)
+                    , timeoutInMinutes: 30, pollInterval: 1000)
              return outputs.'${config.testEndpoint}'
 
         }
