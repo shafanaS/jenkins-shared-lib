@@ -13,6 +13,6 @@
 <p>
     <pre>
         @Library('wso2-pipeline-core') _
-        getAvailabilityZone
+        getAvailabilityZone()
     <pre>
 </p>

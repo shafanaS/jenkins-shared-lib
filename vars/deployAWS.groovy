@@ -19,7 +19,7 @@
 def call(Map config) {
     def WSO2InstanceType = "WSO2InstanceType=${config.wso2InstanceType}"
     def KeyPairName = "KeyPairName=${config.keyPairName}"
-    def CertificateName = "CertificateName=${config.CertName}"
+    def CertificateName = "CertificateName=${config.certName}"
     def DBUsername = "DBUsername=${config.dbUsername}"
     def DBPassword = "DBPassword=${config.dbPassword}"
     def JDKVersion = "JDKVersion=${config.jdkVersion}"
