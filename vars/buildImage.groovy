@@ -29,7 +29,7 @@ String call(Map config) {
         int status = sh(
                 script: """
                         export AWS_SHARED_CREDENTIALS_FILE=$AWS_CREDS_FILE 
-                        packer build  -var "product=$PRODUCT_DIST" \
+                        PACKER_LOG=1 packer build  -var "product=$PRODUCT_DIST" \
                         -var "region=$PACKER_REGION" \
                         -var "base_ami=$PACKER_BASE_IMAGE" \
                         -var "image_resources=$IMAGE_RESOURCES" \
