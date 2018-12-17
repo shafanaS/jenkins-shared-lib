@@ -41,8 +41,6 @@ def call(Map config) {
                              JDKVersion,
                              AMIId]
                     , timeoutInMinutes: 30, pollInterval: 1000)
-            //echo outputs
-            //echo "${outputs.'${config.testEndpoint}'}"
             return outputs."${config.testEndpoint}"
         }
     }
