@@ -25,6 +25,7 @@ def call(Map config) {
              "ZIP_OUTPUT_LOC=${config.zipLoc}",
              "WUM_HOME=${config.wumHome}",
              "PUPPET_CONF_LOC=${config.puppetConfLoc}",
+             "DEPLOYMENT_PATTERN=${config.deploymentPattern}",
              "PRODUCT=${config.product}",
              "VERSION=${config.version}"]) {
 

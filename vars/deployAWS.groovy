@@ -24,6 +24,8 @@ def call(Map config) {
     def DBPassword = "DBPassword=${config.dbPassword}"
     def JDKVersion = "JDKVersion=${config.jdkVersion}"
     def AMIId = "AMIid=${config.amiID}"
+    def Product = "Product=${config.product}"
+    def Version = "Version=${config.version}"
     env.AWS_CREDS_FILE = "${config.awsCredsFile}"
     withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: "${config.credID}"]]) {
         def AWSAccessKeyId = "AWSAccessKeyId=${env.AWS_ACCESS_KEY_ID}"
@@ -39,7 +41,9 @@ def call(Map config) {
                              DBUsername,
                              DBPassword,
                              JDKVersion,
-                             AMIId]
+                             AMIId,
+                             Product,
+                             Version]
                     , timeoutInMinutes: 30, pollInterval: 1000)
             return outputs."${config.testEndpoint}"
         }

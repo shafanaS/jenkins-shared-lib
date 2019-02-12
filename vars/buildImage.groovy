@@ -19,7 +19,7 @@
 import org.wso2.util.Constants
 
 String call(Map config) {
-    withEnv(["PRODUCT_DIST=${config.product}-${config.version}.zip",
+    withEnv(["PRODUCT_DIST=${config.product}-${config.version}",
              "PACKER_BASE_IMAGE=${config.image}",
              "PACKER_REGION=${config.region}",
              "PACKER_JSON=${config.packerJson}",
