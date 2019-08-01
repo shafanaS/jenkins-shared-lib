@@ -22,7 +22,7 @@ def call(Map config) {
     def CertificateName = "CertificateName=${config.certName}"
     def DBUsername = "DBUsername=${config.dbUsername}"
     def DBPassword = "DBPassword=${config.dbPassword}"
-    def JDKVersion = "JDKVersion=${config.jdkVersion}"
+    def DBType = "DBType=${config.dbType}"
     def AMIId = "AMIid=${config.amiID}"
     def Product = "Product=${config.product}"
     def Version = "Version=${config.version}"
@@ -40,7 +40,7 @@ def call(Map config) {
                              CertificateName,
                              DBUsername,
                              DBPassword,
-                             JDKVersion,
+                             DBType,
                              AMIId,
                              Product,
                              Version]

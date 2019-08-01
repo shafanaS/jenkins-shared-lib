@@ -31,6 +31,7 @@ class Constants {
         static final int STATUS_FAILED_UNZIP = 15
         static final int STATUS_FAILED_RM_UNZIP = 16
         static final int STATUS_FAILED_ARTIFACT_APPLY = 17
+        static final int STATUS_FAILED_WUM_INIT = 18
     }
     class Stages {
         static final String SETUP_ENV = "Setup Environment"
