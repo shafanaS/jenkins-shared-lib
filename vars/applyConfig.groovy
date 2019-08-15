@@ -38,6 +38,8 @@ def call(Map config) {
             )
             if (status == Constants.ControlConstants.STATUS_FAILED_WUM_UPDATE) {
                 throw new Exception("Failed to apply updates")
+            } else if (status == Constants.ControlConstants.STATUS_FAILED_WUM_INIT) {
+                throw new Exception("Failed to init WUM. Check your WUM credentials")
             } else if (status == Constants.ControlConstants.STATUS_FAILED_WUM_ADD) {
                 throw new Exception("Wum add process failed")
             } else if (status == Constants.ControlConstants.STATUS_FAILED_INPLACE_UPDATES) {

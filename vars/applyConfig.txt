@@ -12,7 +12,10 @@
 
 <p>
     <pre>
-        @Library('wso2-pipeline-core') _
-        applyConfig product:"params.PRODUCT", version: "params.VERSION", wum_creds: "${WUM_CREDS}", puppetManifest: "${PUPPET_CONF}", artifactsLoc: "${ARTIFACT_LOC}", zipLoc: "${IMAGE_RESOURCES_LOC}", wumHome: "${WUM_HOME}"
+        @Library('wso2-jenkins-shared-lib')
+        stage('apply_config')
+        {
+            applyConfig(product:"${PRODUCT}", version: "${VERSION}", wum_creds: "${WUM_CREDS}", puppetManifest: "${PUPPET_CONF}", artifactsLoc: "${ARTIFACT_LOC}", zipLoc: "${IMAGE_RESOURCES_LOC}", wumHome: "${WUM_HOME}")
+        }
     <pre>
 </p>
