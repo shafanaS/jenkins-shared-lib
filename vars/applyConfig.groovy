@@ -27,7 +27,8 @@ def call(Map config) {
              "PUPPET_CONF_LOC=${config.puppetConfLoc}",
              "DEPLOYMENT_PATTERN=${config.deploymentPattern}",
              "PRODUCT=${config.product}",
-             "VERSION=${config.version}"]) {
+             "VERSION=${config.version}",
+             "WITH_ANALYTICS=${config.withAnalytics}"]) {
 
         withCredentials([usernamePassword(credentialsId: "${config.wum_creds}",
                 passwordVariable: 'WUM_PASSWORD',
