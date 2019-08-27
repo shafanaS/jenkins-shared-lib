@@ -23,7 +23,6 @@ String call(Map config) {
              "VERSION=${config.version}",
              "DEPLOYMENTPATTERN=${config.deploymentPattern}",
              "DBTYPE=${config.dbType}",
-             "PACKER_BASE_IMAGE=${config.image}",
              "PACKER_REGION=${config.region}",
              "PACKER_JSON=${config.packerJson}",
              "PACKER_MANIFEST=${config.packerManifest}",
@@ -37,7 +36,6 @@ String call(Map config) {
                         -var "deploymentPattern=$DEPLOYMENTPATTERN" \
                         -var "dbType=$DBTYPE" \
                         -var "region=$PACKER_REGION" \
-                        -var "base_ami=$PACKER_BASE_IMAGE" \
                         -var "image_resources=$IMAGE_RESOURCES" \
                         -var "manifest=$PACKER_MANIFEST" $PACKER_JSON
                         """,
