@@ -26,13 +26,14 @@ def call(Map config) {
     def AMIId = "AMIid=${config.amiID}"
     def Product = "Product=${config.product}"
     def Version = "Version=${config.version}"
+    def Environment = "Environment=${config.environment}"
     env.AWS_CREDS_FILE = "${config.awsCredsFile}"
     withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: "${config.credID}"]]) {
         def AWSAccessKeyId = "AWSAccessKeyId=${env.AWS_ACCESS_KEY_ID}"
         def AWSAccessKeySecret = "AWSAccessKeySecret=${env.AWS_SECRET_ACCESS_KEY}"
 
         withAWS(credentials: "${config.credID}", region: "${config.region}") {
-            def outputs = cfnUpdate(stack: "${config.environment}", file: "${config.cf}",
+            def outputs = cfnUpdate(stack: "${config.stackName}", file: "${config.cf}",
                     params: [AWSAccessKeyId,
                              AWSAccessKeySecret,
                              WSO2InstanceType,
@@ -43,7 +44,8 @@ def call(Map config) {
                              DBType,
                              AMIId,
                              Product,
-                             Version]
+                             Version,
+                             Environment]
                     , timeoutInMinutes: 30, pollInterval: 1000)
             return outputs."${config.testEndpoint}"
         }
