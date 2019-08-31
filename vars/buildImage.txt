@@ -13,7 +13,7 @@
 <p>
     <pre>
         @Library('wso2-pipeline-core') _
-        env.IMAGE_ID = buildImage (product:"${PRODUCT}", version: "${VERSION}", region: "${REGION}",
-                            packerJson: "${PACKER_JSON}", image: "${BASE_IMAGE}", packerManifest: "${PACKER_MANIFEST}")
+        env.IMAGE_ID = buildImage (product:"productname", version: "version", region: "region",
+                            packerJson: "packerjson", image: "amiID", packerManifest: "packermanifest")
     <pre>
 </p>
