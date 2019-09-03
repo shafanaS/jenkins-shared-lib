@@ -1,5 +1,6 @@
-# Jenkins-shared-lib
-This repository is a [Jenkins shared library](https://jenkins.io/doc/book/pipeline/shared-libraries/) which contains set of functions that can be used in a [Jenkins pipeline](https://jenkins.io/doc/book/pipeline/).
+# Shared resources in AWS CICD Pipeline
+
+This repository contains the library resources used in AWS CICD Pipeline. [Jenkins shared library](https://github.com/wso2/aws-cicd-shared-lib.git) contains set of functions are used in [Jenkins pipeline artifacts](https://github.com/wso2/aws-cicd-pipeline.git).
 
 
 #### Prerequisites  
@@ -10,11 +11,11 @@ This library depends on following Jenkins plugins:
 * [Pipeline Utility Steps Plugin](https://wiki.jenkins.io/display/JENKINS/Pipeline+Utility+Steps+Plugin)
 
 
-
 #### Quick Start Guide
 
-1. Configure this repository as a shared library under the name "wso2-jenkins-shared-lib"
-2. Usage of logging functions 
+ **Step 1**: Configure this repository as a shared library under the name "wso2-jenkins-shared-lib"
+ 
+ **Step 2**: Use the functions under vars folder as below.
 ```
 @Library('wso2-jenkins-shared-lib')
 
